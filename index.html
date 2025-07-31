@@ -1,45 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Grace Lin's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grace Lin | Portfolio</title>
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2em;
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f9f9f9;
     }
-    h1 {
-      color: #4CAF50;
+    header {
+      background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      color: white;
+      padding: 4em 1em;
+      text-align: center;
     }
-    .project {
-      margin-bottom: 1.5em;
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 1em;
     }
-    a {
+    h1, h2 {
+      margin: 0.2em 0;
+    }
+    .socials a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+    .projects {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+      display: grid;
+      gap: 2em;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1em;
+    }
+    .card-content h3 {
+      margin: 0 0 0.5em 0;
+    }
+    .card-content p {
+      font-size: 0.9em;
+      color: #555;
+    }
+    .card-content a {
+      display: inline-block;
+      margin-top: 0.5em;
       color: #0366d6;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>Grace Lin</h1>
-  <p>Industrial Engineering @ UofT | AI & Business Minor</p>
-  <p><a href="https://github.com/grace-ylin">GitHub</a> | <a href="https://linkedin.com/in/your-link">LinkedIn</a></p>
 
-  <h2>Projects</h2>
+  <header>
+    <img src="LinkedIn-Headshot.jpg" alt="Profile photo" />
+    <h1>Grace Lin</h1>
+    <p>Industrial Engineering @ the University of Toronto</p>
+    <div class="socials">
+      <a href="https://github.com/grace-ylin">GitHub</a>
+      <a href="https://www.linkedin.com/in/grace-lin-624044281/">LinkedIn</a>
+      <a href="grrace.lin@mail.utoronto.ca">Email</a>
+    </div>
+  </header>
 
-  <div class="project">
-    <h3>🧠 Disease Modeling with SIRVQD</h3>
-    <p>Simulated equitable vaccine allocation under different scenarios using Python and Latin Hypercube Sampling.</p>
-    <p><a href="https://github.com/grace-ylin/disease-modeling">View project</a></p>
-  </div>
+  <section class="projects">
+    <div class="card">
+      <img src="https://i.imgur.com/0y8Ftya.jpeg" alt="Project image" />
+      <div class="card-content">
+        <h3>Disease Modeling (SIRVQD)</h3>
+        <p>Simulating equitable vaccine allocation with Python + Latin Hypercube Sampling</p>
+        <a href="https://github.com/grace-ylin/disease-modeling">View on GitHub</a>
+      </div>
+    </div>
 
-  <div class="project">
-    <h3>💬 Reddit Sentiment Analysis</h3>
-    <p>Analyzed student sentiment across Canadian universities using NLP and VADER.</p>
-    <p><a href="https://github.com/grace-ylin/reddit-sentiment">View project</a></p>
-  </div>
+    <div class="card">
+      <img src="https://i.imgur.com/Zl4SyoT.png" alt="Project image" />
+      <div class="card-content">
+        <h3>Reddit Sentiment Analysis</h3>
+        <p>Analyzing university complaints across Canada using NLP + VADER</p>
+        <a href="https://github.com/grace-ylin/reddit-sentiment">View on GitHub</a>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
