@@ -57,6 +57,7 @@
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       overflow: hidden;
+      cursor: pointer;
     }
     .card img {
       width: 100%;
@@ -104,7 +105,7 @@
     <div class="socials">
       <a href="https://github.com/grace-ylin">GitHub</a>
       <a href="https://www.linkedin.com/in/grace-lin-624044281/">LinkedIn</a>
-      <a href="grrace.lin@mail.utoronto.ca">Email</a>
+      <a href="mailto:grrace.lin@mail.utoronto.ca">Email</a>
     </div>
   </header>
 
@@ -118,15 +119,14 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="window.open('https://mannkenn.github.io/uni-sentiment-analysis.html', '_blank')">
       <img src="images/uni-complaints.png" alt="Project image" />
       <div class="card-content">
         <h3>Reddit-University Sentiment Analysis</h3>
         <p>Analyzing student complaints at universities across Canada through Reddit</p>
-        <a href="https://github.com/mannkenn/uni-sentiment-analysis">View on GitHub</a>
+        <a href="https://github.com/mannkenn/uni-sentiment-analysis" target="_blank" style="color: #0366d6; font-size: 0.9em;">View on GitHub</a>
       </div>
     </div>
-  </section>
 
 <script>
   const cards = document.querySelectorAll('.card');
