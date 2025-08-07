@@ -16,9 +16,9 @@
       background: 
         linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0) 60%,
-          #000000 80%,
-          #1e1e1e 100%
+          rgba(0, 0, 0, 0) 85%,    
+          rgba(0, 0, 0, 0.5) 95%,  
+          rgba(30, 30, 30, 0.7) 100%
         ),
         url('images/background4.JPG') center/cover no-repeat;
       color: white;
@@ -70,6 +70,13 @@
       display: grid;
       gap: 2em;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .projects h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: 1em;
+      font-weight: 600;
+      font-size: 2em;
     }
     .card {
       background: #1e1e1e;
@@ -131,6 +138,7 @@
   </header>
 
   <section class="projects">
+    <h2 style="text-align: center; margin-bottom: 1em;">Projects</h2>
     <div class="card" onclick="window.open('https://github.com/grace-ylin/Modelling-Disease-Transmission', '_blank')">
       <img src="https://t4.ftcdn.net/jpg/08/12/20/23/360_F_812202393_4HpZUKrArX8maeEolDRCK64OivjsbLdc.jpg" alt="Project image" />
       <div class="card-content">
