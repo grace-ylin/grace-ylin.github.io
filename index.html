@@ -69,7 +69,7 @@
       padding: 0 1em;
       display: grid;
       gap: 2em;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 480px));
       justify-content: center;
     }
     .projects h2 {
@@ -117,7 +117,12 @@
       color: #0366d6;
       text-decoration: none;
     }
-    .card.revealed {
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .card.revealed, .reveal.revealed{
         opacity: 1;
         transform: translateY(0);
     }
@@ -141,7 +146,7 @@
   </header>
 
   <section class="projects">
-    <h2>Projects</h2>
+    <h2 class="reveal">Projects</h2>
 
     <div class="card" onclick="window.open('https://github.com/grace-ylin/Modelling-Disease-Transmission', '_blank')">
       <img src="https://t4.ftcdn.net/jpg/08/12/20/23/360_F_812202393_4HpZUKrArX8maeEolDRCK64OivjsbLdc.jpg" alt="Project image" />
@@ -162,16 +167,16 @@
 
 
 <script>
-  const cards = document.querySelectorAll('.card');
+  const revealElements = document.querySelectorAll('.card, .reveal');
 
   function revealOnScroll() {
     const triggerBottom = window.innerHeight * 0.85;
 
-    cards.forEach(card => {
-      const cardTop = card.getBoundingClientRect().top;
+    revealElements.forEach(el => {
+      const elTop = el.getBoundingClientRect().top;
 
-      if (cardTop < triggerBottom) {
-        card.classList.add('revealed');
+      if (elTop < triggerBottom && !el.classList.contains('revealed')) {
+        el.classList.add('revealed');
       }
     });
   }
